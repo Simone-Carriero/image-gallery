@@ -1,0 +1,17 @@
+.photos {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .photos {
+    grid-template-columns: repeat(3, 3fr);
+  }
+}
