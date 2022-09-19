@@ -1,5 +1,6 @@
 .photos {
   display: grid;
+  justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -12,6 +13,6 @@
 
 @media only screen and (min-width: 900px) {
   .photos {
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
