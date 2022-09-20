@@ -7,16 +7,29 @@ const client_id = '?client_id=oI60ywb5uBNiyeMeFXCtEVgq1-CGX8w-f8Rc9OYLiUE'
 const baseUrl = 'https://api.unsplash.com/photos/random/'
 const searchUrl = 'https://api.unsplash.com/search/photos/'
 
-type Data = {
-  likes: number,
-  full: string,
-  username: string,
+type ProfileImage = {
   medium: string
+}
+
+type User = {
+  username: string
+  profile_image: ProfileImage
+}
+
+type Urls = {
+  full: string
+}
+
+export type PhotosData = {
+  id: string
+  urls: Urls
+  likes: number
+  user: User
 }
 
 function App() {
   const [query, setQuery] = useState('')
-  const [photos, setPhotos] = useState<Data[]>([])
+  const [photos, setPhotos] = useState<PhotosData[]>([])
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
 

@@ -1,7 +1,12 @@
 import './Photo.css'
 import { FaHeart } from 'react-icons/fa'
+import {PhotosData} from '../../App'
 
-const Photo = ({photo}) => {
+type PhotoProps = {
+  photo: PhotosData
+}
+
+const Photo = ({ photo }: PhotoProps) => {
   return (
     <div className='photo'>
       <img className='photo-image' src={photo.urls.full} alt="" />

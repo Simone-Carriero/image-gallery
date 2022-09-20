@@ -1,7 +1,13 @@
+import { PhotosData } from '../../App'
 import Photo from '../Photo/Photo'
 import './Photos.css'
 
-const Photos = ({ photos, loading }) => { 
+type PhotosProps = {
+  photos: PhotosData[]
+  loading: boolean
+}
+
+const Photos = ({ photos, loading }: PhotosProps) => { 
   if (loading) return <div>Loading...</div>
   return (
     <div className='photos'>
