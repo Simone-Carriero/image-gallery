@@ -1,14 +1,24 @@
 .search {
-  text-align: center;
   border-bottom: 3px solid #d3cece;
 }
 
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
 .search-input {
-  padding: .2rem;
-  width: 80%;
+  flex: 1;
+  padding: .5rem .2rem;
   border: none;
 }
 
 .search-button {
   background-color: transparent;
+}
+
+@media only screen and (min-width: 600px) {
+  .search {
+    width: 50%;
+  }
 }
